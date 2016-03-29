@@ -11,38 +11,33 @@ mongoose.connect("mongodb://localhost:27017/bharat",function(){
 });
 
 var ss=time();
-var arr=[];
-  var d=[];
+//var arr=[];
+var d=[];
 
-function a()
-{
-    console.log("hello");
 
-}
-
- // async.parallel([
- //  function a()
- // {
- //     loadData("d0");
- // },
- //  function a()
- // {
- //     loadData("d1");
- // },
- //  function a()
- // {
- //     loadData("d2");
- // },
- //  function a()
- // {
- //     loadData("d3");
- // }  
- //  ], function done(err, results) {
- //        if (err) {
- //            throw err;
- //        }
- //        res.end("\nDone!");
- //    });
+  async.parallel([
+   function a()
+  {
+      loadData("d0");
+  },
+   function a()
+  {
+      loadData("d1");
+  },
+   function a()
+  {
+      loadData("d2");
+  },
+   function a()
+  {
+      loadData("d3");
+  }  
+   ], function done(err, results) {
+         if (err) {
+             throw err;
+         }
+         res.end("\nDone!");
+     });
 
 
 
@@ -83,7 +78,7 @@ function loadData(file)
 }
 
 
- loadData("d0");
+ //loadData("d0");
 
 
 // for(i=0;i<4;i++)
